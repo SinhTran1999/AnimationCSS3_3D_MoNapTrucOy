@@ -1,0 +1,64 @@
+*{margin: 0; padding: 0;}
+
+.xanh {
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: url(2.jpg);
+    /*Thuoc tinh transition la di chuyen cham 0.2s khi di chuyen chuot vao phan tu bo(Thuoc tinh dong bang chuyen dong khi hover)*/
+    transition: 0.2s;
+    /*Thuoc tinh backface-visibility:hidden la an cai mat sau*/
+    backface-visibility: hidden;
+}
+
+.den {
+
+    height: 180px;
+    width: 180px;
+    /*Luc nao phan tu con cung position:absolute*/
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    background: black;
+    color: white;
+    left: 20px;
+    box-sizing: border-box;
+    top: 20px;
+    /*Thuoc tinh transition la di chuyen cham 0.2s khi di chuyen chuot vao phan tu bo(Thuoc tinh dong bang chuyen dong khi hover)*/
+    transition: 0.2s;
+/*Thuoc tinh transform:rotateY(-180deg) la thuoc tinh quay truc Y -180do*/
+    transform: rotateY(-180deg);
+}
+
+.trang {
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background: white;
+    box-shadow: 0px 0px 0px 1px #0000008a;
+}
+
+.bo {
+    height: 220px;
+    width: 220px;
+    position: relative;
+    margin: auto;
+    background: url(2.jpg);
+    box-shadow: inset -1px -2px 0px 20px #f1eaeaab;
+    border-radius: 22px;
+    perspective: 500px;
+    float:left;
+    margin: 20px;
+}
+/*Khi di chuyen chuot vao thuoc tinh bo thi .xanh se quay 180do*/
+.bo:hover .xanh{
+	transform: rotateY(180deg)
+}
+/*Khi di chuyen chuot vao thuoc tinh bo thi .den se quay tro ve 0do*/
+.bo:hover .den{
+	transform: rotateY(0deg)
+}
